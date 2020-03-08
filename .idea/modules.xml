@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/rpl-ms-hotel-be.iml" filepath="$PROJECT_DIR$/rpl-ms-hotel-be.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application.iml" filepath="$PROJECT_DIR$/application.iml" />
       <module fileurl="file://$PROJECT_DIR$/transaction/rpl-ms-transaction.iml" filepath="$PROJECT_DIR$/transaction/rpl-ms-transaction.iml" />
     </modules>
   </component>
