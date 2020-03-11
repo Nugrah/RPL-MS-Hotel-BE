@@ -1,0 +1,8 @@
+  ____       ____       _                    __   __    _   _  
+U |  _"\ u  U|  _"\ u   |"|                   \ \ / / U |"|u| | 
+ \| |_) |/  \| |_) |/ U | | u      U  u        \ V /   \| |\| | 
+  |  _ <     |  __/    \| |/__     /___\      U_|"|_u   | |_| | 
+  |_| \_\    |_|        |_____|   |__"__|       |_|    <<\___/  
+  //   \\_   ||>>_      //  \\              .-,//|(_  (__) )(   
+ (__)  (__) (__)__)    (_")("_)              \_) (__)     (__)
+${AnsiColor.BRIGHT_BLUE}:: Holaaa :: This Spring Is Created by Gorgeus Tim - Aji - Komara - Rama - Tresna ${spring-boot.version} :: \ö/${AnsiColor.BLACK}

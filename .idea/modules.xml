@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/application.iml" filepath="$PROJECT_DIR$/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel.iml" filepath="$PROJECT_DIR$/hotel.iml" />
       <module fileurl="file://$PROJECT_DIR$/transaction/rpl-ms-transaction.iml" filepath="$PROJECT_DIR$/transaction/rpl-ms-transaction.iml" />
     </modules>
   </component>
