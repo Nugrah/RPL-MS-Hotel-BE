@@ -1,0 +1,16 @@
+<!-- Page header -->
+<div class="page-header border-bottom-0 container" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="page-header-content header-elements-md-inline">
+        <div class="page-title d-flex">
+            <h4 th:text="${title}"></h4>
+        </div>
+        <th:block th:if="${subTitle} == true">
+            <div class="header-elements d-none mb-3 mb-md-0">
+                <div class="d-flex justify-content-center">
+                    <a th:href="${titlePermalink}" class="btn btn-link btn-float text-default"><i th:class="${icon}"></i><span th:text="${subTitleText}"></span></a>
+                </div>
+            </div>
+        </th:block>
+    </div>
+</div>
+<!-- /Page header -->

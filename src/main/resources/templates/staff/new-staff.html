@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Management Systems</title>
+    <th:block th:include="fragments/header/header-scripts"></th:block>
+</head>
+<body>
+
+<th:block th:include="fragments/navbar/main-nav"></th:block>
+
+<!-- Page content -->
+<div class="page-content">
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <th:block th:include="fragments/content/page-header" th:with="title=${'New Staff Member'},subTitle=${true},icon=${'icon-user-plus'},subTitleText=${'Add New Staff'},titlePermalink=${'/new-staff'}"></th:block>
+
+        <!-- Content area -->
+        <div class="content pt-0">
+            <div class="row">
+                <div class="col-md-11 m-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <form th:action="@{/add-staff}" method="post">
+                                <div class="form-group">
+                                    <label>Name:</label>
+                                    <input type="text" name="fullname" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email:</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password:</label>
+                                    <input type="password" name="password" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Role:</label>
+                                    <select name="role" class="form-control form-control-select2" data-fouc>
+                                        <option value="ADMIN">Admin</option>
+                                        <option value="HMM">Hotel Management</option>
+                                        <option value="FDR">Front Desk</option>
+                                        <option value="RFD">Restaurant Front Desk</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="d-block">Gender:</label>
+
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-input-styled" name="gender" value="male" checked data-fouc>
+                                            Male
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-input-styled" name="gender" value="female" data-fouc>
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary">Add New Staff</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /content area -->
+
+        <th:block th:include="fragments/footer/footer-copyright"></th:block>
+
+    </div>
+    <!-- /main content -->
+
+</div>
+<!-- /page content -->
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Management Systems</title>
+    <th:block th:include="fragments/header/header-scripts"></th:block>
+</head>
+<body>
+
+    <th:block th:include="fragments/navbar/main-nav"></th:block>
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <th:block th:include="fragments/content/page-header" th:with="title=${'Staff Member'},subTitle=${true},icon=${'icon-user-plus'},subTitleText=${'Add New Staff'},titlePermalink=${'/new-staff'}"></th:block>
+
+            <!-- Content area -->
+            <div class="content pt-0">
+                <div class="card">
+                    <div class="table-responsive table-scrollable table-bordered table-striped">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="user,iter : ${users}">
+                                    <th:block th:name="email" th:value="${user.getEmail()}"></th:block>
+                                    <th th:text="${iter.count}"></th>
+                                    <td th:text="${user.getFullname()}"></td>
+                                    <td th:text="${user.getEmail()}"></td>
+                                    <td th:text="${user.getIndividualRoles()}"></td>
+<!--                                    <th:block th:if="${role == 'ADMIN'}">-->
+<!--                                        <td>-->
+<!--                                                        <span>-->
+<!--                                                            <a th:href="@{/edit/{id}(id=${user.id})}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">-->
+<!--                                                                <i class="fa fa-pencil color-muted m-r-5"></i>-->
+<!--                                                            </a>-->
+<!--                                                            <a th:href="@{/delete/{id}(id=${user.id})}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Close">-->
+<!--                                                                <i class="fa fa-close color-danger"></i>-->
+<!--                                                            </a>-->
+<!--                                                        </span>-->
+<!--                                        </td>-->
+<!--                                    </th:block>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /content area -->
+
+            <th:block th:include="fragments/footer/footer-copyright"></th:block>
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</body>
+</html>

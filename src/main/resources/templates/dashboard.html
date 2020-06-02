@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Management Systems</title>
+    <th:block th:include="fragments/header/header-scripts"></th:block>
+</head>
+<body>
+
+    <th:block th:include="fragments/navbar/main-nav"></th:block>
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <th:block th:include="fragments/content/page-header" th:with="title=${'Dashboard'}"></th:block>
+
+            <!-- Content area -->
+            <div class="content pt-0">
+
+                <!-- Dashboard Report -->
+                    <div class="row">
+                        <div class="col-xl-6">
+
+                        </div>
+                        <div class="col-xl-6">
+
+                        </div>
+                    </div>
+                <!-- /Dashboard Report -->
+
+            </div>
+            <!-- /content area -->
+
+            <th:block th:include="fragments/footer/footer-copyright"></th:block>
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</body>
+</html>
